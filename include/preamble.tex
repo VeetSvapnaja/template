@@ -18,4 +18,5 @@
 \pagestyle{mystyle}
 \pagenumbering{arabic} % Roman numerals
 \setcounter{page}{1}
-\renewcommand{\theHchapter}{\arabic{chapter}}
+
+\ifdefined\theHchapter\else\newcommand\theHchapter{\arabic{chapter}}\fi
